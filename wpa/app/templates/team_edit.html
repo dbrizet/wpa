@@ -1,0 +1,10 @@
+<h1>Ajouter une équipe</h1>
+
+<form action="{% url "team-edit" %}" method="POST">
+  {% csrf_token %}
+  <ul>
+    {{ form.as_ul }}
+  </ul>
+  <input id="save_team" type="submit" value="Ajouter" />
+</form>
+<!-- <a href="{% url "team-list" %}">Retour à la liste</a>-->
